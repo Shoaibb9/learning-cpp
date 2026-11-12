@@ -21,9 +21,9 @@ int main()
 
     // Demonstrating the use of float, double, and long double literals
     float f = 3.14;
-    std::cout << "The value of the float 3.14 is " << f << std::endl;
-    std::cout << "The value of the float 3.14f is " << 3.14f << std::endl;
-    std::cout << "The value of the float 3.14l is " << 3.14l << std::endl;
+    std::cout << "The value of the float 3.14 is " << sizeof(f) << std::endl;
+    std::cout << "The value of the float 3.14f is " << sizeof(3.14f) << std::endl;
+    std::cout << "The value of the float 3.14l is " << sizeof(3.14l) << std::endl;
 
     // Demonstrating the use of reference variables
     int x = 10;
