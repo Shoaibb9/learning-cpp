@@ -4,7 +4,7 @@ int main()
 {
     // Declare variables to store the student's information.
     char student_name[100];
-    float Math, Physics, Chemistry;
+    float math, physics, chemistry;
     int student_id;
 
     // Get the student's name.
@@ -18,14 +18,14 @@ int main()
 
     // Get the marks for each subject.
     std::cout << "Enter the marks candidate recieved in Math" << std::endl;
-    std::cin >> Math;
+    std::cin >> math;
     std::cout << "Enter the marks candidate recieved in Physics" << std::endl;
-    std::cin >> Physics;
+    std::cin >> physics;
     std::cout << "Enter the marks candidate recieved in Chemistry" << std::endl;
-    std::cin >> Chemistry;
+    std::cin >> chemistry;
 
     // Validate that all marks are in the valid range (0 to 100).
-    if (Math < 0 || Math > 100 || Physics < 0 || Physics > 100 || Chemistry < 0 || Chemistry > 100)
+    if (math < 0 || math > 100 || physics < 0 || physics > 100 || chemistry < 0 || chemistry > 100)
     {
         std::cout << "Invalid marks entered. Please enter marks between 0 and 100." << std::endl;
         return 1;
@@ -36,10 +36,10 @@ int main()
     std::cout << "Student ID: 1607051-" << student_id << std::endl;
 
     // Calculate the average percentage after reading the marks.
-    const float percentage = (Math + Physics + Chemistry) / 3.0;
+    const float percentage = (math + physics + chemistry) / 3.0;
 
     // Check if the student has failed in any subject.
-    if (Math < 36 || Physics < 36 || Chemistry < 36)
+    if (math < 36 || physics < 36 || chemistry < 36)
     {
         std::cout << "Candidate has failed to pass the GP-Engineering Examination!." << std::endl
                   << "Hence the report card for the candidate cannot be generated." << std::endl;
@@ -76,45 +76,45 @@ int main()
     }
 
     // Check if all subject marks are equal.
-    if (Math == Physics && Physics == Chemistry)
+    if (math == physics && physics == chemistry)
     {
-        float equal_marks = Math; // Since all marks are equal, we can use any of them.
+        float equal_marks = math; // Since all marks are equal, we can use any of them.
         std::cout << "The Candidate has scored equal marks in all subjects." << std::endl;
         std::cout << "Hence the Candidate has secured " << equal_marks << " in all subjects." << std::endl;
     }
     // Check for equal highest marks in Math and Physics.
-    else if (Math == Physics && Math > Chemistry)
+    else if (math == physics && math > chemistry)
     {
         std::cout << "The Candidate has scored equal marks in Math and Physics." << std::endl;
-        std::cout << "Hence the Candidate has secured " << Math << " in both subjects." << std::endl;
+        std::cout << "Hence the Candidate has secured " << math << " in both subjects." << std::endl;
     }
     // Check for equal highest marks in Math and Chemistry.
-    else if (Math == Chemistry && Math > Physics)
+    else if (math == chemistry && math > physics)
     {
         std::cout << "The Candidate has scored equal marks in Math and Chemistry." << std::endl;
-        std::cout << "Hence the Candidate has secured " << Math << " in both subjects." << std::endl;
+        std::cout << "Hence the Candidate has secured " << math << " in both subjects." << std::endl;
     }
     // Check for equal highest marks in Physics and Chemistry.
-    else if (Physics == Chemistry && Physics > Math)
+    else if (physics == chemistry && physics > math)
     {
         std::cout << "The Candidate has scored equal marks in Physics and Chemistry." << std::endl;
-        std::cout << "Hence the Candidate has secured " << Physics << " in both subjects." << std::endl;
+        std::cout << "Hence the Candidate has secured " << physics << " in both subjects." << std::endl;
     }
     // Find the subject with the highest marks.
-    else if (Math > Physics && Math > Chemistry)
+    else if (math > physics && math > chemistry)
     {
         std::cout << "The Candidate has scored the highest marks in Math." << std::endl;
-        std::cout << "The Candidate has scored " << Math << " in Math." << std::endl;
+        std::cout << "The Candidate has scored " << math << " in Math." << std::endl;
     }
-    else if (Physics > Math && Physics > Chemistry)
+    else if (physics > math && physics > chemistry)
     {
         std::cout << "The Candidate has scored the highest marks in Physics." << std::endl;
-        std::cout << "The Candidate has scored " << Physics << " in Physics." << std::endl;
+        std::cout << "The Candidate has scored " << physics << " in Physics." << std::endl;
     }
-    else if (Chemistry > Math && Chemistry > Physics)
+    else if (chemistry > math && chemistry > physics)
     {
         std::cout << "The Candidate has scored the highest marks in Chemistry." << std::endl;
-        std::cout << "The Candidate has scored " << Chemistry << " in Chemistry." << std::endl;
+        std::cout << "The Candidate has scored " << chemistry << " in Chemistry." << std::endl;
     }
 
     return 0;
